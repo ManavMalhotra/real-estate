@@ -34,11 +34,8 @@ export const Payment = () => {
           alt="Cryptocurreny"
           width={1000}
           style={{
-            filter: "grayscale(100%)",
-            filter: "brightness(-30%)",
-            filter: "contrast(75%)",
-            filter: "blur(10px)",
-            filter: "hue-rotate(20deg)",
+            filter:
+              "grayscale(100%), brightness(-30%), contrast(75%), blur(10px), hue-rotate(20deg)",
             opacity: "0.9",
           }}
         />

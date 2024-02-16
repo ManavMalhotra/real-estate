@@ -67,8 +67,8 @@ export const Main = () => {
       <div className="hidden md:block absolute bottom-0 ">
         {/* @ts-ignore */}
         <Marquee velocity={20}>
-          {location.map((item) => (
-            <div className="flex flex-row px-8 items-center gap-4">
+          {location.map((item, i) => (
+            <div key={i} className="flex flex-row px-8 items-center gap-4">
               <LocationOnIcon className="text-white text-2xl " />
               <h3 key={item} className="text-white text-2xl ">
                 {item}
