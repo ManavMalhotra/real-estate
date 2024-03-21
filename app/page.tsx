@@ -8,9 +8,15 @@ import { WeOffer } from "@/components/WeOffer";
 import { Payment } from "@/components/Payment";
 import { Footer } from "@/components/Footer";
 import LocomotiveScroll from "locomotive-scroll";
+import { useEffect } from "react";
 
 export default function Home() {
-  const locomotiveScroll = new LocomotiveScroll();
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
 
   return (
     <main className="flex py-8 bg-black justify-center items-center flex-col">
