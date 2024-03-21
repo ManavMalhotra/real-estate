@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 
 export const Payment = () => {
   return (
-    <section className="flex flex-col lg:flex-row py-16 pl-32">
+    <section className="flex flex-col md:flex-row py-16 px-8 md:pl-32">
       <div className="">
         <h1 className="text-5xl text-golden">
           PAYMENT BY CRYPTOCURRENCY IS POSSIBLE!
@@ -28,11 +28,11 @@ export const Payment = () => {
           <h1>LEAVE A REQUEST</h1>
         </button>
       </div>
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <Image
           src={Crypto}
           alt="Cryptocurreny"
-          width={1000}
+          className="w-[100vw]"
           style={{
             filter:
               "grayscale(100%), brightness(-30%), contrast(75%), blur(10px), hue-rotate(20deg)",

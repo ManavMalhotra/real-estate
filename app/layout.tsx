@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant } from "next/font/google";
 import "./globals.css";
-
 const cormant = Cormorant({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -14,6 +13,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={cormant.className}>{children}</body>

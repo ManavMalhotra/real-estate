@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import QutubMinar from "./qutub_minar.png";
 import Marquee from "react-marquee-slider";
@@ -5,21 +6,28 @@ import { Navbar } from "@/components/Navbar";
 import { Main } from "@/components/Main";
 import { WeOffer } from "@/components/WeOffer";
 import { Payment } from "@/components/Payment";
+import { Footer } from "@/components/Footer";
+import LocomotiveScroll from "locomotive-scroll";
 
 export default function Home() {
+  const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <main className="flex py-8 bg-black justify-center items-center flex-col">
       {/* NavBar  */}
       <Navbar />
 
       {/* Main Section  */}
-      <Main />
+      <Main data-scroll-content data-scroll data-scroll-speed="-0.5" />
 
       {/* WHAT WE OFFER */}
-      <WeOffer />
+      <WeOffer data-scroll data-scroll-speed="0.5" />
 
       {/* Payment  */}
-      <Payment />
+      <Payment data-scroll-container data-scroll data-scroll-speed="-0.5" />
+
+      {/* Footer  */}
+      <Footer />
     </main>
   );
 }
