@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Navbar = () => {
   const menu = [
     "MAIN",
@@ -12,14 +14,16 @@ export const Navbar = () => {
     <nav className="hidden lg:block px-16">
       <ul className="flex flex-row">
         {menu.map((item) => (
-          <li
+          <Link
             key={item}
-            className="text-white border bg-lightBlue border-golden px-12 py-4"
+            href={`/${item.replace(" ", "-").toLowerCase()}`}
+            className="text-white border bg-lightBlue border-golden px-12 py-4
+            hover:bg-golden hover:text-black transition duration-300 ease-in-out
+            cursor-pointer text-nowrap
+            "
           >
-            <a href="/" className="text-nowrap">
-              {item}
-            </a>
-          </li>
+            <li>{item}</li>
+          </Link>
         ))}
       </ul>
     </nav>
